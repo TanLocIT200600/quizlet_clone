@@ -1,11 +1,13 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
+import { NextUIProvider } from '@nextui-org/react';
+
 import Header from './../components/Header';
 
 function MyApp({ Component, pageProps }) {
-  return <>
+  return <NextUIProvider>
     <Header />
     <Component {...pageProps} />
-  </>
+  </NextUIProvider>
 }
 
 export default MyApp
